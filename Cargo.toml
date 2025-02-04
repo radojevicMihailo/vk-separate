@@ -4,6 +4,7 @@ version = "0.1.0"
 edition = "2021"
 description = "A CLI tool to remove Committer key from Verification key in Nova protocol"
 license = "MIT"
+repository = "https://github.com/radojevicMihailo/vk-separate"
 keywords = ["zero-knowledge", "rust", "nova", "cli"]
 
 [dependencies]
