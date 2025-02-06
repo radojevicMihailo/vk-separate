@@ -7,7 +7,6 @@ license = "MIT"
 repository = "https://github.com/radojevicMihailo/vk-separate"
 documentation = "https://docs.rs/vk-separate"
 readme = "README.md"
-categories = ["zero-knowledge", "rust", "nova", "cli"]
 keywords = ["zero-knowledge", "rust", "nova", "cli"]
 authors = ["Your Name <radojevic.mihailo.00@gmail.com>"]
 homepage = "https://github.com/radojevicMihailo/vk-separate"

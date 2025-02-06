@@ -1,8 +1,7 @@
 use std::fs::{self, File};
-use std::io::{self, Read, Write};
-use std::env;
+use std::io::{self, Read};
 use clap::Parser;
-use serde_json::{Value, Map};
+use serde_json::{Value, Map, json};
 use serde_json::ser::{Serializer, PrettyFormatter};
 
 /// CLI tool for processing JSON files and removing specific fields.
@@ -33,14 +32,14 @@ fn main() -> io::Result<()> {
         if let Some(vk_primary) = obj.get_mut("vk_primary").and_then(Value::as_object_mut) {
             if let Some(vk_ee) = vk_primary.get_mut("vk_ee").and_then(Value::as_object_mut) {
                 if let Some(ck_v) = vk_ee.get_mut("ck_v").and_then(Value::as_object_mut) {
-                    ck_v.remove("ck");
+                    ck_v.insert("ck".to_string(), json!([]));
                 }
             }
         }
         if let Some(vk_secondary) = obj.get_mut("vk_secondary").and_then(Value::as_object_mut) {
             if let Some(vk_ee) = vk_secondary.get_mut("vk_ee").and_then(Value::as_object_mut) {
                 if let Some(ck_v) = vk_ee.get_mut("ck_v").and_then(Value::as_object_mut) {
-                    ck_v.remove("ck");
+                    ck_v.insert("ck".to_string(), json!([]));
                 }
             }
         }
