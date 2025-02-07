@@ -15,7 +15,7 @@ type S<E, EE> = nova_snark::spartan::ppsnark::RelaxedR1CSSNARK<E, EE>;
 
 /// CLI tool for processing JSON files and removing specific fields.
 #[derive(Parser)]
-#[command(name = "json_processor", version = "1.0", about = "Processes JSON files by removing 'ck' fields.")]
+#[command(name = "vk_separate", version = "1.0", about = "Processes JSON files by removing 'ck' fields.")]
 struct Cli {
     /// Input JSON file
     input_file: String,
