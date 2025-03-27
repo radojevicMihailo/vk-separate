@@ -1,4 +1,5 @@
 /target
 
 *.json
+*.bin
 proba-bin-1
