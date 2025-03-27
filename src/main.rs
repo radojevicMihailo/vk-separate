@@ -105,7 +105,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         let bytes_vk = postcard::to_allocvec(&json_data_vk)?;
 
         // ! Write bytes to BIN file
-        let output_bin_path_vk = format!("{}/{}", path, file_name);
+        let output_bin_path_vk = format!("{}/{}.bin", path, file_name);
         fs::write(output_bin_path_vk.clone(), &bytes_vk)?;
 
         Ok(bytes_vk)
